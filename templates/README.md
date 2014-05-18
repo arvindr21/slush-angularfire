@@ -70,20 +70,20 @@ $ gulp test
         chat.html           --> a $firebase() sync used as an array, with explicit bindings
         login.html          --> authentication and registration using $firebaseAuth
         account.html        --> a secured page (must login to view this)
-      config/karma.conf.js        --> config file for running unit tests with Karma
-      config/karma-e2e.conf.js    --> config file for running e2e tests with Karma
-      config/security-rules.json  --> sample security rules for your Firebase
-      test/               --> test source files and libraries
-        e2e/              -->
-          runner.html     --> end-to-end test runner (open in your browser to run)
-          scenarios.js    --> end-to-end specs
-        lib/
-          angular/                --> angular testing libraries
-            angular-mocks.js      --> mocks that replace certain angular services in tests
-            angular-scenario.js   --> angular's scenario (end-to-end) test runner library
-            version.txt           --> version file
-        unit/                     --> unit level specs/tests
-          *Spec.js                --> specs for a specific module in app/js
+    config/karma.conf.js        --> config file for running unit tests with Karma
+    config/karma-e2e.conf.js    --> config file for running e2e tests with Karma
+    config/security-rules.json  --> sample security rules for your Firebase
+    test/               --> test source files and libraries
+      e2e/              -->
+        runner.html     --> end-to-end test runner (open in your browser to run)
+        scenarios.js    --> end-to-end specs
+      lib/
+        angular/                --> angular testing libraries
+          angular-mocks.js      --> mocks that replace certain angular services in tests
+          angular-scenario.js   --> angular's scenario (end-to-end) test runner library
+          version.txt           --> version file
+      unit/                     --> unit level specs/tests
+        *Spec.js                --> specs for a specific module in app/js
 
 ## Contact
 
