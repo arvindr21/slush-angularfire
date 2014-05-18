@@ -87,9 +87,9 @@ $ gulp test
 
 ## Contact
 
-More information on AngularFire: http://angularfire.com
-More information on Firebase: http://firebase.com
-More information on AngularJS: http://angularjs.org/
+* More information on AngularFire: http://angularfire.com
+* More information on Firebase: http://firebase.com
+* More information on AngularJS: http://angularjs.org/
 
 ## LICENCE
 
