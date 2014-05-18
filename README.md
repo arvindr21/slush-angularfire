@@ -38,8 +38,10 @@ $ cd my-slush-angularfire && slush angularfire
 
 ## To Run the app
 
+Execute 
+
 ```bash
-gulp
+$ gulp
 ```
 
 ## Testing

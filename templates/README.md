@@ -1,27 +1,15 @@
 
-# angularFire-seed — the seed for AngularFire apps
+# AngularFire-seed
 
 This project is an application skeleton for a typical [AngularFire](http://angularfire.com/) web app.
 This library allows you to quickly bootstrap real-time apps using [Firebase](http://www.firebase.com) and [AngularJS](http://www.angularjs.org).
 
 The seed contains AngularJS libraries, test libraries and a bunch of scripts all preconfigured for
-instant web development gratification. Just clone the repo (or download the zip/tarball), start up
-our (or yours) webserver and you are ready to develop and test your application.
+instant web development gratification.
 
 The seed app doesn't do much, just shows how to wire controllers and views together and persist them
-in Firebase. You can check it out by opening app/index.html in your browser (might not work
-file `file://` scheme in certain browsers, see note below).
+in Firebase. You can check it out by opening app/index.html by running ```$ gulp```.
 
-_Note: While angular, angularFire, and Firebase can be used client-side-only, and it's possible to create
-apps that don't require a backend server at all, we recommend hosting the project files using a local
-webserver during development to avoid issues with security restrictions (sandbox) in browsers. The
-sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,
-etc to function properly when an html page is opened via `file://` scheme instead of `http://`._
-
-
-## How to use angularFire-seed
-
- 
 ### Running the app in production
 
 Make sure you set up security rules for your Firebase! An example for this
@@ -82,21 +70,20 @@ $ gulp test
         chat.html           --> a $firebase() sync used as an array, with explicit bindings
         login.html          --> authentication and registration using $firebaseAuth
         account.html        --> a secured page (must login to view this)
-
-    config/karma.conf.js        --> config file for running unit tests with Karma
-    config/karma-e2e.conf.js    --> config file for running e2e tests with Karma
-    config/security-rules.json  --> sample security rules for your Firebase
-    test/               --> test source files and libraries
-      e2e/              -->
-        runner.html     --> end-to-end test runner (open in your browser to run)
-        scenarios.js    --> end-to-end specs
-      lib/
-        angular/                --> angular testing libraries
-          angular-mocks.js      --> mocks that replace certain angular services in tests
-          angular-scenario.js   --> angular's scenario (end-to-end) test runner library
-          version.txt           --> version file
-      unit/                     --> unit level specs/tests
-        *Spec.js                --> specs for a specific module in app/js
+      config/karma.conf.js        --> config file for running unit tests with Karma
+      config/karma-e2e.conf.js    --> config file for running e2e tests with Karma
+      config/security-rules.json  --> sample security rules for your Firebase
+      test/               --> test source files and libraries
+        e2e/              -->
+          runner.html     --> end-to-end test runner (open in your browser to run)
+          scenarios.js    --> end-to-end specs
+        lib/
+          angular/                --> angular testing libraries
+            angular-mocks.js      --> mocks that replace certain angular services in tests
+            angular-scenario.js   --> angular's scenario (end-to-end) test runner library
+            version.txt           --> version file
+        unit/                     --> unit level specs/tests
+          *Spec.js                --> specs for a specific module in app/js
 
 ## Contact
 
