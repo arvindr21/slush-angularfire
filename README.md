@@ -4,7 +4,7 @@
 
 > A slush generator to scaffold an Angular-Firebase App
 
-## Developement in Progress
+The Generated Angular Firebase app is based on [angularFire-seed](https://github.com/firebase/angularFire-seed). I have added jQuery, Bootstrap and Modernizr support. The app uses Gulp to perform basic tasks like connect server, live reload, csslinting & jslinting. The app is intergated with Karma, so you can execute unit tests as well as e2e tests.
 
 ## Getting Started
 
@@ -16,10 +16,10 @@ Install `slush-angularfire` globally:
 $ npm install -g slush-angularfire
 ```
 
-Remember to install `slush` globally as well, if you haven't already:
+Remember to install `gulp` & `slush` globally as well, if you haven't already:
 
 ```bash
-$ npm install -g slush
+$ npm install -g gulp slush
 ```
 
 ### Usage
@@ -34,6 +34,29 @@ Run the generator from within the new folder:
 
 ```bash
 $ cd my-slush-angularfire && slush angularfire
+```
+
+## To Run the app
+
+```bash
+gulp
+```
+
+## Testing
+
+To run Karma Unit tests execute
+```bash
+$ gulp karma-unit
+```
+
+To run Karma E2E tests execute
+```bash
+$ gulp karma-e2e
+``` 
+
+To run All tests execute
+```bash
+$ gulp test
 ```
 
 ## Getting To Know Slush

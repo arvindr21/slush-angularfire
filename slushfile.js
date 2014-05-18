@@ -20,29 +20,28 @@ gulp.task('default', function (done) {
     var prompts = [{
         type: 'input',
         name: 'appName',
-        message: 'What is the name of your generator?',
+        message: 'What is the name of your AngularFire App?',
         default: gulp.args.join(' ')
     }, {
         type: 'input',
-        name: 'appDescription',
-        message: 'What is the description for your generator?'
-    }, {
-        type: 'confirm',
-        name: 'moveon',
-        message: 'Continue?'
+        name: 'instanceName',
+        message: 'What is the name of the Firebase Instance? (ex: https://my-app.firebaseio.com - "my-app" is the Instance)'
     }];
     //Ask
     inquirer.prompt(prompts,
         function (answers) {
-            if (!answers.moveon) {
+            if (!answers.instanceName) {
+                console.log('We need a Firebase Instance to proceed. Check for more info here: http://goo.gl/Io7fLD');
                 return done();
             }
             answers.appNameSlug = _.slugify(answers.appName);
+            answers.appCamelizeName = _.camelize(answers.appName);
+
             gulp.src(__dirname + '/templates/**')
                 .pipe(template(answers))
                 .pipe(rename(function (file) {
-                    if (file.basename[0] === '_') {
-                        file.basename = '.' + file.basename.slice(1);
+                    if (file.basename.indexOf('_') == 0) {
+                        file.basename = file.basename.replace('_','.');
                     }
                 }))
                 .pipe(conflict('./'))
