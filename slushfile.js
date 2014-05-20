@@ -30,6 +30,10 @@ gulp.task('default', function (done) {
     //Ask
     inquirer.prompt(prompts,
         function (answers) {
+            if (!answers.appName) {
+                console.log('Please provide an App Name to continue');
+                return done();
+            }
             if (!answers.instanceName) {
                 console.log('We need a Firebase Instance to proceed. Check for more info here: http://goo.gl/Io7fLD');
                 return done();
