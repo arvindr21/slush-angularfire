@@ -6,6 +6,9 @@
 
 The Generated Angular Firebase app is based on [angularFire-seed](https://github.com/firebase/angularFire-seed). I have added jQuery, Bootstrap and Modernizr support. The app uses Gulp to perform basic tasks like connect server, live reload, csslinting & jslinting. The app is intergated with Karma, so you can execute unit tests as well as e2e tests.
 
+## TODOS
+- [ ] Upgrade E2E tests to Protractor
+
 ## Getting Started
 
 ### Installation
