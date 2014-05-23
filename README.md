@@ -4,10 +4,7 @@
 
 > A slush generator to scaffold an Angular-Firebase App
 
-The Generated Angular Firebase app is based on [angularFire-seed](https://github.com/firebase/angularFire-seed). I have added jQuery, Bootstrap and Modernizr support. The app uses Gulp to perform basic tasks like connect server, live reload, csslinting & jslinting. The app is intergated with Karma, so you can execute unit tests as well as e2e tests.
-
-## TODOS
-- [ ] Upgrade E2E tests to Protractor
+The Generated Angular Firebase app is based on [angularFire-seed](https://github.com/firebase/angularFire-seed). I have added jQuery, Bootstrap and Modernizr support. The app uses Gulp to perform basic tasks like connect server, live reload, csslinting & jslinting. The app is intergated with Karma & Protractor, so you can execute unit tests as well as e2e tests.
 
 ## Getting Started
 
@@ -36,7 +33,7 @@ $ mkdir my-slush-angularfire
 Run the generator from within the new folder:
 
 ```bash
-$ cd my-slush-angularfire && slush angularfire
+$ cd my-slush-angularfire && slush angularfire myAppName
 ```
 
 ## To Run the app
@@ -59,10 +56,17 @@ To run Karma E2E tests execute
 $ gulp karma-e2e
 ``` 
 
-To run All tests execute
+To run Protractor E2E tests execute
 ```bash
-$ gulp test
+$ gulp webdriver-init
 ```
+to launch the Selenium standalone server.
+
+Then run 
+```bash
+$ gulp ptor-e2e
+```
+to run the protractor e2e tests in Safari ([not chrome](http://stackoverflow.com/a/23805215/1015046)) - Protractor Docs [here](https://github.com/angular/protractor/blob/master/docs/getting-started.md).
 
 ## Getting To Know Slush
 
@@ -105,4 +109,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-

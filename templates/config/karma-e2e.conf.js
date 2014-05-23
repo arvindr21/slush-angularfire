@@ -5,7 +5,7 @@ module.exports = function(config){
       basePath : '../',
 
       files : [
-         'test/e2e/**/*.js'
+         'test/e2e/karma/**/*.js'
       ],
 
       autoWatch : false,
