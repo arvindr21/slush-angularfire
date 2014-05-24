@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     template = require('gulp-template'),
     rename = require('gulp-rename'),
     _ = require('underscore.string'),
-    inquirer = require('inquirer');
+    inquirer = require('inquirer'),
+    whichOs = require('which-os');
 
 gulp.task('default', function (done) {
     var prompts = [{
@@ -40,6 +41,7 @@ gulp.task('default', function (done) {
             }
             answers.appNameSlug = _.slugify(answers.appName);
             answers.appCamelizeName = _.camelize(answers.appName);
+            answers.os = whichOs();
 
             gulp.src(__dirname + '/templates/**')
                 .pipe(template(answers))

@@ -95,6 +95,18 @@ gulp.task('karma-unit', function() {
     });
 });
 
+<% if(os.toLowerCase().indexOf('window') >= 0 ) { %>
+gulp.task('webdriver-init', shell.task([
+  'node node_modules/protractor/bin/webdriver-manager update',
+  'node node_modules/protractor/bin/webdriver-manager start'
+]));
+
+gulp.task('ptor-end2end', shell.task([
+  'node node_modules/protractor/bin/protractor config/protractor-conf.js'
+]));
+<% } %>
+
+<% if(os.toLowerCase().indexOf('window') < 0 ) { %>
 gulp.task('webdriver-init', shell.task([
   './node_modules/protractor/bin/webdriver-manager update',
   './node_modules/protractor/bin/webdriver-manager start'
@@ -103,6 +115,8 @@ gulp.task('webdriver-init', shell.task([
 gulp.task('ptor-end2end', shell.task([
   './node_modules/protractor/bin/protractor config/protractor-conf.js'
 ]));
+<% } %>
+
 
 gulp.task('default', ['connect', 'watch']);
 gulp.task('karma-e2e', ['connect-karma', 'karma-end2end']);
